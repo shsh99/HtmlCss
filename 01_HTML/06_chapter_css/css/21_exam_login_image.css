@@ -1,0 +1,9 @@
+fieldset {
+    width: 30vw;
+    margin: 0 auto;
+}
+
+label, input {
+    text-align: center;
+    vertical-align: middle;
+}

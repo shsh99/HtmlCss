@@ -1,0 +1,13 @@
+
+ul {
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f5f7e4;
+    width: 640px;
+    padding: 30px;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 10px;
+}

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Moirai+One&display=swap');
+
+h1 {
+    font-family: 'Moirai One', cursive;
+    text-align: center;
+}
+
+p{
+    font-family: 'Diphylleia', serif;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+h3 {
+    border-left: 5px solid green;
+    padding-left: 10px;
+}
+div {
+    width: 610px;
+    text-align: right;
+}
+
+table, td {
+    border: 1px solid gray;
+}
+table {
+    border-collapse: collapse;
+    font-size: 12px;
+    width: 610px;
+    margin: 10px;
+    
+}
+
+tr {
+    height: 60px;
+}
+ 
+td {
+   
+    padding: 5px;
+    width: 76px;
+   
+}

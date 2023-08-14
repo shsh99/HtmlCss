@@ -1,0 +1,7 @@
+/* position: sticky = 고정 */
+.top-bar {
+    height: 50px;
+    background-color:bisque;
+    position: sticky;
+    top: 0;
+}

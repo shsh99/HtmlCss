@@ -1,0 +1,15 @@
+/* 메뉴 */
+/* fixed = 메뉴 고정으로 많이 사용 */
+.top-bar {
+    height: 50px;
+    background-color: darkorchid;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+/* 본문 */
+.container {
+    margin-top: 50px;
+}

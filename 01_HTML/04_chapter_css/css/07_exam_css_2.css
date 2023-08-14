@@ -1,0 +1,15 @@
+p {
+    color: green;
+    /* 폰트 스타일 */
+    font-family: 'Times New Roman', Times, sans-serif;
+    /* 글자 크기 */
+    font-size: 18px;
+}
+
+span {
+    
+    color: blue;
+    /* 굵은글씨 */
+    font-weight: bold;
+    text-decoration: underline;
+}

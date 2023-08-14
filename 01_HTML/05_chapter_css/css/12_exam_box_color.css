@@ -1,0 +1,12 @@
+body {
+    background-color: yellow;
+}
+
+#button {
+    background-color: blue;
+    color: aliceblue;
+    width: 120px;
+    height: 25px;
+    padding: 10px;
+    text-align: center;
+}

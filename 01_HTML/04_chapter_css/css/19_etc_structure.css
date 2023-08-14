@@ -1,0 +1,16 @@
+/* 구조 선택자 */
+li {
+    /* 목록 앞에 점 없애기 */
+    list-style-type: none;
+}
+
+/* 2n = 짝수 */
+li:nth-child(2n) {
+    /* 2진수:0,1  8진수:1~7  10진수:1~9  16진수:1~15 */
+    background-color: #babaab;
+}
+
+/* 2n+1 = 홀수 */
+li:nth-child(2n+1) {
+ background-color: #aaff;   
+}

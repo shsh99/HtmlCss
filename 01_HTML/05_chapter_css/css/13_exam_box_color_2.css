@@ -1,0 +1,27 @@
+/* css 디자인 여백 초기화 */
+/* 웹브라우저 (크롬, 네이버, 익스프로러 등  */
+/* 브라우저마다 미세한 차이가 있기 때문에 통일 시키려고 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#banner {
+    border: 1px solid rgb(216, 199, 199);
+    background-color: rgb(220, 234, 247);
+    width: 300px;
+    height: 180px;
+    padding: 20px;
+    margin: 10px;
+}
+p {
+    padding-bottom: 10px;
+}
+#button {
+    background-color: palevioletred;
+    color: white;
+    width: 120px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+} 

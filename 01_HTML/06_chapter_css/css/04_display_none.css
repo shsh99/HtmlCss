@@ -1,0 +1,9 @@
+/* id 선택자 : #변수명 {} */
+/* display: none <-> block (활용:드롭다운 메뉴) */
+
+#box {
+    background-color: yellowgreen;
+    width: 100px;
+    height: 100px;
+    display: none;
+}

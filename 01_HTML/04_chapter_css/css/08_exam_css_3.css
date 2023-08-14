@@ -1,0 +1,15 @@
+p {
+    color: green;
+    text-decoration: underline;
+}
+
+li {
+    /* ./ = 현재경로 */
+     /* ../ = 상위 경로 (부모경로) */
+    /* <!--이미지 가져오기 = list-style-image: url (이미지경로)--> */
+    /* <!-- list-style-image: url("../img/lo.gif");--> */
+    list-style-image:url("../img/lo.gif") 
+}
+span{
+    font-weight: bold;
+}

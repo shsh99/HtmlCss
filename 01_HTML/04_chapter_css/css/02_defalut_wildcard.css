@@ -1,0 +1,9 @@
+/* (wildcard) * = 전체 선택자 */
+* {
+    color: red;
+}
+
+h1 {
+    color: aqua;
+    background: blue;
+}

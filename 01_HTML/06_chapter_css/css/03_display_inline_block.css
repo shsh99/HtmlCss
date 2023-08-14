@@ -1,0 +1,27 @@
+
+/* inline-block = div 속성 + 줄바꿈 없음(속성) */
+/* 활용 : 세로배치 -> 가로배치 디자인 적용하고자 할 때 */
+/* 예) ul- li(block속성, 세로메뉴) -> 가로메뉴(위의 속성 고려) */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 20px;
+  display: inline-block;
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: darkcyan;
+  margin: 20px;
+  display: inline-block;
+}
+
+.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: darkgreen;
+  margin: 20px;
+  display: inline-block;
+}

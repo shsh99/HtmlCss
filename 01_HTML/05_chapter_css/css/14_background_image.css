@@ -1,0 +1,16 @@
+/* body : 웹 브라우저 창크기를 의미 */
+body {
+    /* 배경 이미지 : 기본, 모든 화면을 꽉 채움 */
+    /* css 이미지 넣기 : url("이미지 경로") */
+    background-image: url("https://picsum.photos/id/10/200/300");
+    /* 배경 이미지 반복 중지 속성 */
+    background-repeat: no-repeat;
+    /* 배경 이미지 위치 조정(좌표) : 단위 %, px */
+    /* % = 왼쪽  px = 위쪽 */
+    background-position: 20% 20px;
+
+    /* 배경 이미지 크기 */
+    /* 화면 단위 : vw, vh(뷰포트 가로,뷰포트 세로) : 반응형 디자인 단위 */
+    /* 가로크기 세로크기 */
+    background-size: 50vw 50vh;
+}

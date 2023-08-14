@@ -1,0 +1,21 @@
+/* id 선택자 : 기본선택자 */
+/* id 속성(공통) : 태그에 이름을 부여하는 속성(변수명), 유일(관례),js사용 */
+/* px(픽셀) : 화면 화소단위, 고정크기 */
+/* name 속성(공통) : 태그에 이름을 부여하는 속성(변수명), 
+                jsp(서버쪽 통신), react 사용 */
+#header {
+    /* 가로크기 */
+    width: 800px;
+    /* 배경색 */
+    background-color: red;
+
+}
+
+#wrap {
+    width: 800px;
+}
+
+#content {
+    width: 300px;
+    background-color: green;
+}
