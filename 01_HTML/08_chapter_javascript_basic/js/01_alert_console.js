@@ -9,5 +9,4 @@
 // 결과 확인 : 크롬 브라우저(오른쪽 클릭) 
 //             - 검사 - 2nd 탭 (console)
 console.log("Hello Javascript");
-
 // 기타 : 함수 => 이름(문자열[변수 등]) 

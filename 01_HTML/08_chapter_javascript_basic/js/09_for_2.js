@@ -24,35 +24,3 @@
 
 //     console.log("i의 값은 " + i); // 결과 i 출력
 // }
-
-//  1) 1 부터 100까지 출력하기
-//  for 문 사용
-//  for(let i=1; i<=100; i++) {
-//      console.log(i);
-//  }
-
-//  2) 1 부터 n 까지 출력하기
-//  입력예시 : 5
-//  출력예시 : 1 2 3 4 5
-// let num = Number(prompt("정수1")); // 5
-//  문자열 붙이기 변수 
-// let result = ""; // 빈문자열
-
-//  반복문
-//  for(초기값;초기값변수<=끝값;증감식){}
-// for(let i=1; i<=num;i++) {
-//     result = result + i + " "; // 문자열 붙이기
-// }
-//  결과 출력 
-// console.log(result);
-
-
-// 3) a 부터 b 까지 출력
-
-// let num1 = Number(prompt("")); 
-// let num2 = Number(prompt("")); 
-// for(let i = num1; i <= num2; i++) {
-//     console.log(i);
-// }
-
-
