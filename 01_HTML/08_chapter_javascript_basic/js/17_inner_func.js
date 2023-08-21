@@ -79,33 +79,54 @@
 // TODO: 10) 수학함수 
 // 반올림(첫째자리)
 // 사용법 : Math.round(실수) -> 반올림된 정수
-console.log("Math.round", Math.round(5.3));
-console.log("Math.round", Math.round(5.7));
+// console.log("Math.round", Math.round(5.3));
+// console.log("Math.round", Math.round(5.7));
 
 // 올림(첫째자리), ceil(천장)
 // 사용법 : Math.ceil(실수) -> 올림 정수
-console.log("Math.ceil", Math.ceil(5.3));
+// console.log("Math.ceil", Math.ceil(5.3));
 
 // 내림(첫째자리), floor(바닥)
 // 사용법 : Math.floor(실수) -> 내림 정수
-console.log("Math.floor", Math.floor(5.3));
+// console.log("Math.floor", Math.floor(5.3));
 
 // 절대값 : 음수 -> 양수
 // 사용법 : Math.abs(음수) -> 양수
-console.log("Math.abs", Math.abs(-3.7));
+// console.log("Math.abs", Math.abs(-3.7));
 
 // 최소값 :
 // 사용법 : Math.min(값, 값2...값n) -> 최소값
-console.log("Math.min", Math.min(0, 3, -5, 12));
+// console.log("Math.min", Math.min(0, 3, -5, 12));
 
 // 최대값 :
 // 사용법 : Math.max(값, 값2...값n) -> 최대값
-console.log("Math.max", Math.max(0, 3, -5, 12));
+// console.log("Math.max", Math.max(0, 3, -5, 12));
 
 // 제곱 : 
 // 사용법 : Math.pow(숫자, 제곱수)
-console.log("Math.pow", Math.pow(2, 4));
+// console.log("Math.pow", Math.pow(2, 4));
 
 // 제곱근 : 
 // 사용법 : Math.sqrt(숫자)
-console.log("Math.sqrt", Math.sqrt(25));
+// console.log("Math.sqrt", Math.sqrt(25));
+
+// TODO : 11) 날짜 함수들
+// let date = new Date(); // 현재 날짜 (년, 월, 일, 시, 분, 초);
+
+// 출력
+// let year = date.getFullYear(); // 년도
+// let month = date.getMonth()+1; // 월 (0 ~ 11)
+// let day = date.getDate(); // 일
+
+// console.log("year", year);
+// console.log("month", month);
+// console.log("day", day);
+
+// 출력
+// let hour = date.getHours(); // 시
+// let minute = date.getMinutes(); // 분
+// let second = date.getSeconds(); // 초
+
+// console.log("hour", hour);
+// console.log("minute", minute);
+// console.log("second", second);
