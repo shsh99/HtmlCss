@@ -1,5 +1,6 @@
 // document.querySelector("css선택자") : js 선택 함수
 // css선택자 : 기본선택자(전체(*), id, class 등)
+// #output = div 태그
 
 // id 선택자로(#output) html 태그 선택
 // 선택함수(querySelector() return 값 : html 태그 나옴)
