@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3 id="tit">직접선택자</h3>
+    <h3>인접선택자</h3>
+
+    <!-- jquery cdn : 인터넷 주소로 자동 다운로드 -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+      $(function () {
+        // 코딩 : 예제 : 2개를 선택해서 디자인 적용하기
+        $("h1, #tit")
+          .css("background-color", "skyblue")
+          .css("border", "2px dashed");
+      });
+    </script>
+  </body>
+</html>
