@@ -1,9 +1,9 @@
 // DeptList.js : dept 조회 페이지
 // rfce
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // 메뉴 라이브러리
 // axios 공통 함수 파일 import
 import DeptService from "../../services/DeptService";
-import { Link } from "react-router-dom";
 
 function DeptList() {
   // TODO: 변수 정의 : 줄복사 단축키(ctrl + d), 자동정렬(ctrl + alt + l)
@@ -30,17 +30,36 @@ function DeptList() {
       });
   };
 
-  // 화면이 뜰때 retrieveDept 실행
-  useEffect(()=>{
+  //  화면이 뜰때 retrieveDept 실행
+  // useEffect(()=>{실행문}, []);
+  useEffect(() => {
     retrieveDept(); // 함수의 사용
-  },[])
+  }, []);
 
-  const findByDname = () => { }
+  // 검색어 조회 함수 : findByDname()
+  // nfn
+  // axios : get(url) : 공통함수 : DeptService.findByDname(검색어)
+  const findByDname = () => {
+    DeptService.findByDname(searchDname) // 검색어로 조회 요청
+      .then((response) => {
+        // 성공하면 자동실행
+        setDept(response.data); // 벡엔드에서 전달해준 데이터를(response.data) 저장
+        // 로그 찍기
+        console.log(response.data); // 벡엔드데이터(response.data)
+      })
+      .catch((e) => {
+        // 실패하면 자동실행
+        console.log(e); // 에러메세지 출력
+      });
+  };
 
-  const onChangeSearchDname = (event) => { 
-    setSearchDname(event.target.value)
-   }
-  
+  // 검색어 입력양식 : onChange={함수명}
+  // 역바인딩 함수 : 코딩
+  // nfn
+  const onChangeSearchDname = (event) => {
+    setSearchDname(event.target.value); // 역바인딩 코딩
+  };
+
   return (
     // TODO: 여기
     <div>
@@ -102,6 +121,10 @@ function DeptList() {
                   <td>{data.dname}</td>
                   <td>{data.loc}</td>
                   <td>
+                    {/* 1)사용법 : /url?변수명=변수값 (쿼리스트링 방식) */}
+                    {/* 2)사용법 : /url/변수값        (파라메터 방식)
+                            -> 다른페이지에서 값을 받을수 있음 */}
+                    {/* 클릭하면 상세페이지가 화면에 뜸(부서번호도 넘겨줌) */}
                     <Link to={"/dept/" + data.id}>
                       <span className="badge bg-success">Edit</span>
                     </Link>

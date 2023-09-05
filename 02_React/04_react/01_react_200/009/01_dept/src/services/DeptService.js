@@ -2,6 +2,7 @@
 // axios 기본 주소 정의 파일 import : http-common.js(확장자 생략가능)
 import http from "../utils/http-common";
 
+// TODO: 조회 : axios.get() 함수 사용
 // 공통 모든 데이터 조회 함수 : /dept
 // nfn
 const getAll = () => {
@@ -17,8 +18,37 @@ const findByDname = (dname) => {
   return http.get(`/dept?dname=${dname}`);
 };
 
+//  저장 요청 함수(대상 : 화면에 입력된 객체)
+// nfn
+//  TODO: 저장요청 : axios.post("url", 객체) 함수 사용
+const create = (data) => {
+  return http.post("/dept", data);
+};
+
+// TODO: 상세조회요청(1건) : axios.get(url/부서번호(id)) 함수 사용
+// nfn
+const get = (id) => {
+  return http.get(`/dept/${id}`);
+};
+
+// TODO: 삭제요청함수(1건) : axios.delete(`/dept/${id}`);
+// nfn
+const remove = (id) => {
+  return http.delete(`/dept/${id}`);
+};
+
+//  TODO: 수정요청함수 : axios.put(`/dept/${id}`, 수정될객체)
+// nfn
+const update = (id, data) => {
+  return http.put(`/dept/${id}`, data);
+};
+
 const DeptService = {
-  getAll, // 모든데이터 조회
-  findByDname, // 검색어 조회
+  getAll, // 모든데이터 조회요청
+  findByDname, // 검색어 조회요청
+  create, // 저장 요청
+  get, // 상세조회요청
+  remove, // 삭제요청
+  update, // 수정요청
 };
 export default DeptService; // 함수 내보내기
