@@ -7,6 +7,7 @@ import FuncExam from './pages/01_exam/FuncExam';
 import Etc from './pages/02_exam/Etc';
 import Counter from './pages/03_exam/Counter';
 import Book from './pages/04_exam/Book';
+import WebtoonExam from './pages/04_exam/WebtoonExam';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <Etc /> */}
       {/* <Counter1/> */}
       {/* <Counter/> */}
-      <Book />
+      {/* <Book /> */}
+      <WebtoonExam />
     </div>
   );
 }

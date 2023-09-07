@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+// Book.tsx : 책방 컴포넌트
+// rfce
+import React, { useState } from "react";
+import IBook from './../../types/IBook';
 
 function Book() {
     // TODO: 변수 정의
@@ -32,13 +35,15 @@ function Book() {
             stock: 4,
         },
     ];
-
-    let [books, setBooks] = useState(initialBooks);
+    // 바인딩 변수(객체배열) 정의 : typescript 적용
+    // TODO: 사용법 : let [변수명, set변수명] = useState<Array<객체자료형>>(초기값);
+    // TODO: 객체자료형 : 따로 정의(IBook) : 이름규칙(명명법) I이름
+    let [books, setBooks] = useState<Array<IBook>>(initialBooks); // 객체배열
 
     // TODO: 함수 정의
 
-
     return (
+        // TODO: 여기
         <div>
             <h1>체르니 책방의 도서목록</h1>
             <table>
@@ -52,11 +57,26 @@ function Book() {
                     </tr>
                 </thead>
                 <tbody>
-                    {/* 반복문 */}
+                    {/* 반복문 : 배열변수.map((value, index)=>(<태그>{value.속성명}</태그>)) */}
+                    {/* 반복대상 : 행(<tr><td></td></tr>) */}
+
+                    {
+                        books.map((value, index) => (
+                            // 테이블 tr/td 태그
+                            <tr key={index}>
+                                <td>{value.id}</td>
+                                <td>{value.title}</td>
+                                <td>{value.publisher}</td>
+                                <td>{value.author}</td>
+                                <td>{value.stock}</td>
+                            </tr>
+                        ))
+                    }
+
                 </tbody>
             </table>
         </div>
-    )
+    );
 }
 
-export default Book
+export default Book;
