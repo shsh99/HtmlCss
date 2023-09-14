@@ -73,6 +73,23 @@ SET
 WHERE DNO = 10;
 
 
+-- 연습 1) 영업부에(SALES) 에 근무하는 사원(DNO) 삭제하기
+-- 힌트) 서브쿼리 사용해서 삭제
+-- 1) 영업부에(SALES)에 해당하는 부서번호를 찾고 : 30
+SELECT DNO FROM DEPT_COPY WHERE DNAME = 'SALES';
+-- 2) 30 부서번호를 가진 사원을 삭제하기
+DELETE DEPT_COPY
+WHERE DNO = (SELECT DNO FROM DEPT_COPY WHERE DNAME = 'SALES');
+
+-- 취소
+ROLLBACK;
+-- 영구 반영
+COMMIT;
+SELECT * FROM DEPT_COPY;
+
+-- 기타 명령어
+-- 테이블 설계구조 보기 : DESC 테이블명
+DESC DEPT_COPY;
 
 
 

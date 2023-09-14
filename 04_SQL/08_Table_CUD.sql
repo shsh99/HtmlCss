@@ -146,9 +146,62 @@ SELECT * FROM DEPT_COPY; -- 데이터 확인
 COMMIT;
 
 -- 연습 2) DEPT_COPY 테이블에 50 부서 'COMPUTING' 만들고,
---        LOC 는 ' ' 공백으로 INSERT 하세요
+--        LOC 는 ' ' 공백으로 INSERT 하세요( 영구 반영 )
 INSERT INTO DEPT_COPY(DNO, DNAME, LOC)
 VALUES(50, 'COMPUTING', ' ');
 
--- 결과보기
+-- 결과 보기
 SELECT * FROM DEPT_COPY; -- 데이터 확인
+-- 영구 반영
+COMMIT;
+
+-- 연습용 테이블 복사 : EMP_COPY (원본 : EMPLOYEE) [데이터 빼고]
+CREATE TABLE EMP_COPY
+AS
+SELECT * FROM EMPLOYEE
+WHERE 1=2; -- 거짓조건
+
+-- 연습 2) EMP_COPY 테이블에 데이터 입력하기
+--  ENO - 7000, ENAME - 'CANDY', JOB - 'MANAGER',
+--  HIREDATE - '2012/05/01', DNO - 10
+INSERT INTO EMP_COPY(ENO, ENAME, JOB, HIREDATE, DNO)
+VALUES(7000, 'CANDY', 'MANAGER', '2012/05/01', 10);
+
+-- 영구 반영
+COMMIT;
+
+SELECT * FROM EMP_COPY;
+
+
+-- 예제 8) 명시적으로 날짜형으로 변환해서 INSERT 하기
+-- 날짜함수 : TO_DATE(문자열, '날짜포맷')
+-- 날짜포맷 : 'YYYY-MM-DD HH24:MI:SS'
+INSERT INTO EMP_COPY(ENO, ENAME, JOB, HIREDATE, DNO)
+VALUES(7010, 'CANDY2', 'MANAGER', TO_DATE('2012/05/01','YYYY-MM-DD HH24:MI:SS'), 10);
+-- 영구 반영
+COMMIT;
+SELECT * FROM EMP_COPY;
+
+-- 예제 9) INSERT 할때 현재날짜(시간) 데이터 넣기 : SYSDATE (현재날짜)
+INSERT INTO EMP_COPY(ENO, ENAME, JOB, HIREDATE, DNO)
+VALUES(7020, 'CANDY3', 'MANAGER', SYSDATE, 10);
+-- 영구 반영
+COMMIT;
+SELECT * FROM EMP_COPY;
+
+-- 예제 10) 다른 테이블의 데이터만 복사하기
+SELECT * FROM DEPT_COPY;
+-- 빠른 삭제 : DELETE 문 보다 속도 빠름
+-- 전체 삭제만 됨, 취소불가(ROLLBACK)
+-- 사용법) TRUNCATE TABLE 테이블명;
+TRUNCATE TABLE DEPT_COPY;
+
+-- 다른 테이블의 데이터 복사(원본데이터 : DEPARTMENT(부서))
+-- 사용법) INSERT INTO 복사될테이블명
+--        SELECT * FROM 원본테이블명;
+INSERT INTO DEPT_COPY
+SELECT * FROM DEPARTMENT;
+-- 결과 확인
+SELECT * FROM DEPT_COPY;
+-- 영구 반영
+COMMIT;
